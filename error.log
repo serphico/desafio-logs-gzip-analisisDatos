@@ -1,0 +1,4 @@
+[2022-03-21T00:35:59.625] [ERROR] prod - Se registro un error en el chat en la Ruta: /chat
+[2022-03-21T00:39:45.608] [ERROR] prod - Se registro un error en el chat en la Ruta: /chat
+[2022-03-21T00:52:33.677] [ERROR] prod - Se registro un error en el envio de mensaje en la Ruta: /chat
+[2022-03-21T00:52:37.213] [ERROR] prod - Se registro un error en el envio de mensaje en la Ruta: /chat

@@ -1,0 +1,22 @@
+doctype html
+
+html(style={margin: '5%'})
+    include ../partials/head.pug
+    body
+        section(class="container-fluid")
+            div(class="row col-4" style='background-color:#f4f4f4; padding: 5%;')
+                form(action="/login", method="post")
+                    div(class="mb-3")
+                        label(for="username" class="form-label") Email
+                        input(type="text" class="form-control" id="username" name="username" placeholder="Jancho@email.com" required) 
+
+                    div(class="mb-3")
+                        label(for="password" class="form-label") Contraseña
+                        input(type="password" class="form-control" id="password" name="password" required) 
+                    
+                       
+                    input(class="btn btn-primary btn-sm" type="submit", id="enviar", value="Enviar")
+                   
+
+                br
+                a(href="/registro") No tengo cuenta, registrartme 

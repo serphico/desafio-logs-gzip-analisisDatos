@@ -1,0 +1,10 @@
+doctype html
+
+html(style={margin: '5%'})
+    include ../partials/head.pug
+    body
+        section(class="container-fluid")
+            div(class="row col-4" style='background-color:#f4f4f4; padding: 5%;')
+                -var despedida = "Hasta luego "+ user 
+                h1= despedida
+    script(src="../../js/redirect.js") 

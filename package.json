@@ -1,0 +1,36 @@
+{
+  "name": "log-gzip-analisisdatos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    
+    "start": "0x server.js",
+    "test": "node benchmark.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autocannon": "^7.7.2",
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "firebase-admin": "^10.0.2",
+    "log4js": "^6.4.3",
+    "mongoose": "^6.2.1",
+    "multer": "^1.4.4",
+    "normalizr": "^3.6.1",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.2",
+    "socket.io": "^4.4.1",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.6"
+  }
+}

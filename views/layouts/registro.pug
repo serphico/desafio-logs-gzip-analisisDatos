@@ -1,0 +1,23 @@
+doctype html
+
+html(style={margin: '5%'})
+    include ../partials/head.pug
+    body
+        section(class="container-fluid")
+            div(class="row col-4" style='background-color:#f4f4f4; padding: 5%;')
+                form(action="/registro", method="post")
+                    div(class="mb-3")
+                        label(for="email" class="form-label") Email
+                        input(type="text" class="form-control" id="email" name="email" placeholder="Jancho@email.com" required) 
+
+                    div(class="mb-3")
+                        label(for="username" class="form-label") Nombre de Usuario
+                        input(type="text" class="form-control" id="username" name="username" required) 
+
+                    div(class="mb-3")
+                        label(for="password" class="form-label") Contraseña
+                        input(type="password" class="form-control" id="password" name="password" required)
+
+                    a(href="/login") Ya tengo cuenta 
+
+                    input(class="btn btn-primary btn-sm" type="submit", id="enviar", value="Enviar")

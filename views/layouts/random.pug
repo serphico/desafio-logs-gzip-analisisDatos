@@ -1,0 +1,18 @@
+doctype html
+
+html(style={margin: '5%'})
+    include ../partials/head.pug
+    body
+        include ../partials/menu.pug
+        section(class="container-fluid")
+            div(class="row col-4" style='background-color:#f4f4f4; padding: 5%;')
+                form(action="/api/randoms/envio", method="get")
+                    div(class="mb-3")
+                        label(for="cant" class="form-label") Cantidad
+                        input(type="number" class="form-control" id="cant" name="cant") 
+                       
+                    input(class="btn btn-primary btn-sm" type="submit", id="enviar", value="Enviar")
+                   
+
+                br
+                div(id="randomPrint")= msg

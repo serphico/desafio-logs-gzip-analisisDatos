@@ -1,0 +1,254 @@
+Statistical profiling result from conConsoleLog-v8.log, (2898 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   2658   91.7%          C:\Windows\SYSTEM32\ntdll.dll
+    232    8.0%          C:\Program Files\nodejs\node.exe
+      1    0.0%          C:\Windows\System32\KERNELBASE.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      5    0.2%   71.4%  LazyCompile: *resolve node:path:158:10
+      1    0.0%   14.3%  LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      1    0.0%   14.3%  Function: ^readFileSync node:fs:450:22
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+      7    0.2%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+     17    0.6%  242.9%  GC
+   2891   99.8%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2658   91.7%  C:\Windows\SYSTEM32\ntdll.dll
+     36    1.4%    C:\Program Files\nodejs\node.exe
+      2    5.6%      Function: ^realpathSync node:fs:2408:22
+      2  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      2  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1   50.0%            LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      1   50.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      2    5.6%      C:\Program Files\nodejs\node.exe
+      1   50.0%        Function: ^realpathSync node:fs:2408:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1   50.0%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%            Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      1    2.8%      LazyCompile: ~t C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\de\address\index.js:1:466
+      1  100.0%        Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\de\address\index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.8%      LazyCompile: ~resolveBSONOptions C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\bson.js:53:28
+      1  100.0%        LazyCompile: ~Db C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\db.js:81:16
+      1  100.0%          LazyCompile: ~db C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\mongo_client.js:165:7
+      1  100.0%            LazyCompile: ~_setClient C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongoose\lib\connection.js:831:20
+      1    2.8%      LazyCompile: ~r C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\ru\name\index.js:1:466
+      1  100.0%        Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\ru\name\index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.8%      LazyCompile: ~parse C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\cmap\commands.js:577:10
+      1  100.0%        LazyCompile: ~messageHandler C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\cmap\connection.js:416:35
+      1  100.0%          Function: ^emit node:events:340:44
+      1  100.0%            LazyCompile: ~processIncomingData C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\cmap\message_stream.js:79:29
+      1    2.8%      LazyCompile: ~parse C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\cmap\commands.js:384:10
+      1  100.0%        LazyCompile: ~messageHandler C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\cmap\connection.js:416:35
+      1  100.0%          Function: ^emit node:events:340:44
+      1  100.0%            LazyCompile: ~processIncomingData C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\cmap\message_stream.js:79:29
+      1    2.8%      LazyCompile: ~openSync node:fs:576:18
+      1  100.0%        LazyCompile: ~readFileSync node:fs:450:22
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1    2.8%      LazyCompile: ~messageHandler C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\cmap\connection.js:416:35
+      1  100.0%        Function: ^emit node:events:340:44
+      1  100.0%          LazyCompile: ~processIncomingData C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\cmap\message_stream.js:79:29
+      1  100.0%            LazyCompile: ~_write C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\cmap\message_stream.js:26:11
+      1    2.8%      LazyCompile: ~maybeCacheSourceMap node:internal/source_map/source_map_cache:74:29
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    2.8%      LazyCompile: ~i C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\uk\phone_number\index.js:1:466
+      1  100.0%        Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\uk\phone_number\index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.8%      LazyCompile: ~get C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\nl\internet\index.js:1:533
+      1  100.0%        Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\nl\internet\index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.8%      LazyCompile: ~get C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\ja\address\index.js:1:533
+      1  100.0%        Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\ja\address\index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.8%      LazyCompile: ~get C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\hy\address\index.js:1:533
+      1  100.0%        Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\hy\address\index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.8%      LazyCompile: ~get C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\fr_CA\index.js:1:406
+      1  100.0%        LazyCompile: ~get C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\index.js:1:544
+      1  100.0%          Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    2.8%      LazyCompile: ~get C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\de_CH\address\city.js:1:362
+      1  100.0%        LazyCompile: ~get C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\de_CH\address\index.js:1:533
+      1  100.0%          Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\de_CH\address\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1    2.8%      LazyCompile: ~exports.USVString C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\webidl-conversions\lib\index.js:265:21
+      1  100.0%        LazyCompile: ~URL C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\whatwg-url\lib\URL.js:90:16
+      1  100.0%          LazyCompile: ~URLWithoutHost C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb-connection-string-url\lib\index.js:74:1
+      1  100.0%            LazyCompile: ~ConnectionString C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb-connection-string-url\lib\index.js:82:16
+      1    2.8%      LazyCompile: ~emit node:events:340:44
+      1  100.0%        LazyCompile: ~checkServer C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\sdam\monitor.js:139:21
+      1  100.0%          LazyCompile: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\sdam\monitor.js:223:12
+      1  100.0%            LazyCompile: ~executeAndReschedule C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\utils.js:788:34
+      1    2.8%      LazyCompile: ~debug node:internal/util/debuglog:76:15
+      1  100.0%        LazyCompile: ~logger node:internal/util/debuglog:96:18
+      1  100.0%          LazyCompile: ~insert node:internal/timers:350:16
+      1  100.0%            LazyCompile: ~setUnrefTimeout node:internal/timers:372:25
+      1    2.8%      LazyCompile: ~collection C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongodb\lib\db.js:192:15
+      1  100.0%        LazyCompile: ~NativeCollection.onOpen C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:46:45
+      1  100.0%          LazyCompile: ~Connection.onOpen C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongoose\lib\connection.js:631:39
+      1  100.0%            LazyCompile: ~_setClient C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongoose\lib\connection.js:831:20
+      1    2.8%      LazyCompile: ~SchemaType C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongoose\lib\schematype.js:40:20
+      1  100.0%        LazyCompile: ~SchemaString C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongoose\lib\schema\string.js:24:22
+      1  100.0%          LazyCompile: ~Schema.interpretAsType C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongoose\lib\schema.js:919:44
+      1  100.0%            LazyCompile: ~Schema.path C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\mongoose\lib\schema.js:655:33
+      1    2.8%      LazyCompile: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\it\name\male_first_name.js:1:430
+      1  100.0%        Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\it\name\male_first_name.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.8%      LazyCompile: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\de\name\nobility_title_prefix.js:1:430
+      1  100.0%        Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\de\name\nobility_title_prefix.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.8%      LazyCompile: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\definitions\word.js:1:430
+      1  100.0%        Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\definitions\word.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.8%      LazyCompile: *resolve node:path:158:10
+      1  100.0%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    2.8%      LazyCompile: *readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1    2.8%      Function: ~<anonymous> node:dgram:1:1
+      1  100.0%        Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%          Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%            Function: ~<anonymous> node:internal/child_process:1:1
+      1    2.8%      Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\ne\company\suffix.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    2.8%      Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\mk\internet\index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    2.8%      Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\es_MX\company\bs_adjective.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    2.8%      Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\en_GH\address\postcode.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    2.8%      Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\cz\name\title.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    2.8%      Function: ^handleErrorFromBinding node:internal/fs/utils:340:32
+      1  100.0%        Function: ^realpathSync node:fs:2408:22
+      1  100.0%          Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%            Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1    2.8%      Function: ^<anonymous> node:internal/validators:235:42
+      1  100.0%        Function: ^compileFunction node:vm:308:25
+      1  100.0%          Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      1  100.0%            LazyCompile: *Module._compile node:internal/modules/cjs/loader:1055:37
+
+    232    8.0%  C:\Program Files\nodejs\node.exe
+    179   77.2%    C:\Program Files\nodejs\node.exe
+     75   41.9%      Function: ^compileFunction node:vm:308:25
+     75  100.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     41   54.7%          Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+     41  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     33   44.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1055:37
+     33  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1    1.3%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1055:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1110:37
+     15    8.4%      Function: ^realpathSync node:fs:2408:22
+     15  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+     13   86.7%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+     10   76.9%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      3   23.1%            Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      2   13.3%          Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      2  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+     14    7.8%      Function: ^stat node:internal/modules/cjs/loader:151:14
+      8   57.1%        Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      6   75.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      5   83.3%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1   16.7%            Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      2   25.0%          LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      2  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      6   42.9%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      6  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      6  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      6    3.4%      Function: ^openSync node:fs:576:18
+      6  100.0%        Function: ^readFileSync node:fs:450:22
+      6  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      5   83.3%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1   16.7%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      5    2.8%      C:\Program Files\nodejs\node.exe
+      1   20.0%        LazyCompile: ~f C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\ja\phone_number\index.js:1:284
+      1  100.0%          LazyCompile: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\ja\phone_number\index.js:1:597
+      1  100.0%            Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\ja\phone_number\index.js:1:1
+      1   20.0%        LazyCompile: ~combineAliases C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\yargs-parser\build\index.cjs:958:24
+      1  100.0%          LazyCompile: ~parse C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\yargs-parser\build\index.cjs:108:10
+      1  100.0%            LazyCompile: ~yargsParser.detailed C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\yargs-parser\build\index.cjs:1035:33
+      1   20.0%        LazyCompile: ~callSiteToString C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\depd\lib\compat\index.js:21:76
+      1  100.0%          LazyCompile: ~get C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\depd\lib\compat\index.js:54:16
+      1  100.0%            Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\depd\index.js:1:1
+      1   20.0%        LazyCompile: ~A C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\pt_BR\date\month.js:1:240
+      1  100.0%          LazyCompile: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\pt_BR\date\month.js:1:430
+      1  100.0%            Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\pt_BR\date\month.js:1:1
+      1   20.0%        Function: ^get C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\lv\address\index.js:1:533
+      1  100.0%          Function: ~<anonymous> C:\Users\gomez\Desktop\desafio-logs-gzip-analisisDatos\node_modules\@faker-js\faker\dist\cjs\locales\lv\address\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1055:37
+      2    1.1%      LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2  100.0%        LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      2  100.0%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    1.1%      Function: ^readSync node:fs:684:18
+      1   50.0%        LazyCompile: *readFileSync node:fs:450:22
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1   50.0%        Function: ^tryReadSync node:fs:429:21
+      1  100.0%          Function: ^readFileSync node:fs:450:22
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      2    1.1%      Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1   50.0%        Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1   50.0%        Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      2    1.1%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   50.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1   50.0%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2    1.1%      Function: ^closeSync node:fs:526:19
+      2  100.0%        Function: ^readFileSync node:fs:450:22
+      2  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1110:37
+      2  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+

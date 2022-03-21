@@ -1,0 +1,49 @@
+doctype html
+
+html(style={margin: '5%'})
+  include ../partials/head.pug
+  body
+    include ../partials/menu.pug
+    div(style='background-color:#f4f4f4; padding: 5%;')
+      h1(id="porcentaje") Formulario de Ingreso de productos
+      form(onsubmit="return addMessage(this)")
+        div(class="mb-3")
+        
+          label(for="email" class="form-label") Email
+          input(type="text" class="form-control" id="email" placeholder="tuemail@dominio.com" required)
+
+        div(class="mb-3")
+        
+          label(for="name" class="form-label") Nombre
+          input(type="text" class="form-control" id="name" placeholder="Juan" required)
+
+        div(class="mb-3")
+        
+          label(for="surname" class="form-label") Apellido
+          input(type="text" class="form-control" id="surname" placeholder="Gonzalez" required)
+
+        div(class="mb-3")
+          label(for="age" class="form-label") edad
+          input(type="number" class="form-control" id="age" placeholder="Edad" required)
+
+        div(class="mb-3")
+          label(for="nick" class="form-label") Alias
+          input(type="text" class="form-control" id="nick" placeholder="JuanElCapo" required)
+
+        div(class="mb-3")
+
+          label(for="avatar" class="form-label") Imagen Avatar
+          input(type="text" class="form-control" id="avatar" placeholder="Foto del avatar")
+        
+        div(class="mb-3 col-3")
+
+            input(type="text" id="mensaje" class="form-control")
+            input(class="btn btn-primary btn-sm" type="submit", id="enviar", value="Enviar")
+       
+        div(id="allChat")
+    
+      div(id="contenedorTable" style="background-color: #072f5c; color: white;")
+    br
+
+    script(src= "./js/index.js")  
+

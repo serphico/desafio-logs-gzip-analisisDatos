@@ -1,0 +1,35 @@
+doctype html
+
+html(style={margin: '5%'})
+  include ../partials/head.pug
+  body
+    include ../partials/menu.pug
+
+    include ../partials/welUser.pug
+    div( style='background-color:#f4f4f4; padding: 5%;')
+        table(class="table")
+                thead
+                    tr            
+                        th(scope="col") Argumentos
+                        th(scope="col") Procesador
+                        th(scope="col") Version de Node
+                        th(scope="col") Uso de memoria
+                        th(scope="col") Direccion de ejecucion
+                        th(scope="col") Id del proceso
+                        th(scope="col") Direccion del proyecto
+                        th(scope="col") Número de Procesadores
+
+                tbody
+                    tr
+                        td(class="titleProd col-2")= infoSys.Argumentos
+                        td(class="titleProd col-1")= infoSys.Procesador
+                        td(class="titleProd col-1")= infoSys.VersionNode
+                        td(class="titleProd col-2")= infoSys.Memoria
+                        td(class="titleProd col-2")= infoSys.DireccionEjecucion
+                        td(class="titleProd col-1")= infoSys.ProcessId
+                        td(class="titleProd col-2")= infoSys.DireccionProyecto
+                        td(class="titleProd col-2")= infoSys.NumeroProcesadores
+
+
+
+    script(src= "../js/index.js") 

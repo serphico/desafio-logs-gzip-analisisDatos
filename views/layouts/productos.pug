@@ -1,0 +1,27 @@
+doctype html
+
+html(style={margin: '5%'})
+  include ../partials/head.pug
+  body
+    include ../partials/menu.pug
+
+    include ../partials/welUser.pug
+    div(style='background-color:#f4f4f4; padding: 5%;')
+        table(class="table")
+            each prod in products
+
+                thead
+                    tr            
+                        th(scope="col") Producto
+                        th(scope="col") Precio
+                        th(scope="col") Imagen
+                tbody
+                    tr
+                        td(class="titleProd")= prod.title
+                        
+                        td(class="priceProd")= prod.price
+                    
+                        td
+                            img(width="100" class="thumbnailProd", src= prod.thumbnail )
+
+    script(src= "../js/index.js") 
